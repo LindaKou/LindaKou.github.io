@@ -1,0 +1,10 @@
+<text class="desc">
+	《易校》是一款开源产品
+   它基于 Bmob 作为后端云服务
+   由KNY团队开发并维护
+</text>
+<image src="/images/KNY.png" mode="widthFix" />
+<view class="copyright">
+<text>石家庄铁道大学 KNY 团队</text>
+<view><text>Copyright @ {{year}} All Rights Reserved</text></view>
+</view>

@@ -1,0 +1,47 @@
+<scroll-view scroll-y='true' class='service'>
+  <view class="box">
+    <view class="tit">易校</view>
+    <view class="tit_s">
+      一.前言
+    </view>
+    <view class="cont">
+      <p>本文档是石家庄铁道大学KNY团队开展的项目《易校》第一版使用说明</p>
+    </view>
+
+    <view class="tit_s">
+      二.软件概述
+    </view>
+    <view class="cont">
+      <p>找东西没有一个专属平台？查教室还得去官网？《易校》为广大师生提供一个方便的平台，失物招领时刻更新，空教室查询方便快捷。一款走进师生的小程序，易校---让学校生活更容易，请保持微笑！</p>
+    </view>
+
+    <view class="tit_s">
+      三. 开源协议(基于MIT)
+    </view>
+    <view class="cont">
+      <p>MIT License</p>
+    </view>
+    <view class="cont">
+      <p>Copyright (c) 2017 Dmego</p>
+    </view>
+    <view class="cont">
+      <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
+        modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+    </view>
+    <view class="cont">
+      <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+    </view>
+    <view class="cont">
+      <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+        HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+      </p>
+    </view>
+
+    <view class="tit_s">
+      四.项目地址
+    </view>
+    <view class="cont">
+      <p>GitHub: https://github.com/dmego/YISmile</p>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,59 @@
+<!-- 新建信息 -->
+<view class="add-page">
+  <form bindsubmit="submitForm">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{TopTips}}</view>
+    <view class="mod-a mt20">
+      <!-- 物品类别 -->
+      <view class="mod t-sign-time">
+        <text class="key">物品类别</text>
+        <picker bindchange="bindTypeChange" value="{{typeIndex}}" range="{{types}}">
+          <view class="value" name="types">{{types[typeIndex]}}
+            <image class="arrow-r" src="/static/images/arrow-r-0.png"></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <!-- 描述 -->
+    <view class="mod-a mt20">
+      <view class="mod-big my-nick">
+        <textarea name="content" class="weui-textarea" placeholder="请输入描述" value="{{content}}" style="height: 7em" bindinput="bindTextAreaChange" maxlength="{{noteMaxLen}}" />
+        <view class="chnumber">{{noteNowLen}}/{{noteMaxLen}}</view>
+      </view>
+    </view>
+    <view class="mod-a"></view>
+      <view class="mod t-name">
+        <picker name="contactWay" bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+          <view class="select">{{accounts[accountIndex]}}</view>
+        </picker>
+        <input name="contactValue" class="input" placeholder="请输入号码" value="{{contactValue}}"/>
+        <image class="arrow-r" src="/static/images/arrow-r-0.png"></image>
+      </view>
+    <view class="add_pic" bindtap="uploadPic" wx-if="{{!isSrc}}">
+      <view>添加图片（选）</view>
+    </view>
+    <view wx:if="{{isSrc}}" class="image_box">
+      <view class="picPre">
+        <image src="{{src}}" mode="aspectFit"></image>
+        <view bindtap="clearPic"></view>
+      </view>
+    </view>
+    <view class="mod-a mt20"></view>
+    
+    
+    
+
+    <view class="mod-a mt20">
+      <checkbox-group bindchange="bindAgreeChange">
+      </checkbox-group>
+      <view class="submit-btn">
+        <button class='button'  hover-start-time="200" disabled="{{isdisabled}}" formType="submit">发布</button>
+      </view>
+    </view>
+  </form>
+</view>
+
+<view class="notice" id="notice" wx:if="{{notice_status}}" bindtap="tapNotice">
+        
+       
+      </view>

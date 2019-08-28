@@ -1,0 +1,49 @@
+
+<view class="topic-common-list">
+  <view class="topic-list-item">
+    <view>
+      <image src="/images/logo1.png" class="cover"></image>
+    </view>
+    <view class="topic-content-title">
+      <text>我的发布</text>
+    </view>
+    <view class="topic-content-title-line"></view>
+    <view class="topic-content-brief">
+      <text>共发布{{totalCount}}个发起</text>
+    </view>
+  </view>
+</view>
+
+<view class="container">
+  <view wx:if="{{postsList.length == 0}}">
+    <view class="imgitem">
+      <image src="/static/images/zanwufabu.png" class="empty_img"></image>
+    </view>
+    <view class="txtitem">
+      <text class="t28rpx">暂无发布</text>
+    </view>
+  </view>
+  <view wx:if="{{postsList.length > 0}}">
+    <view class="index_list">
+  <view class="navigator-hover"  wx:for="{{postsList}}" wx:for-item="item" wx:key="*this" >
+  
+    <view class="horizontal">
+            
+    <view class="tag tag_{{item.acttype}}">{{item.acttypeName}}</view>
+    <view class="pic">
+   <image class="widget__arrow" src="{{item.actPic}}" mode="aspectFill"></image> 
+  </view>
+  </view>
+  
+  <view class="con">
+   宝贝详情：{{item.content}}
+  </view>
+  <view class="cont">
+   请联系我：{{item.contactWay}}{{item.contactValue}}
+  
+          </view>
+
+  </view>
+  </view>
+  </view>
+</view>

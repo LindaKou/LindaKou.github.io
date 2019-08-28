@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/classroom/classroom"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#666666",
+    "navigationBarTitleText": "易校",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "blue",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#D53E37",
+    "backgroundColor": "#F5F5F5",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "失物招领",
+        "iconPath": "images/教室.png",
+        "selectedIconPath": "images/教室2.png"
+      },
+      {
+        "pagePath": "pages/classroom/classroom",
+        "text": "教室查询",
+        "iconPath": "images/教室课表查询.png",
+        "selectedIconPath": "images/教室课表查询2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/用户.png",
+        "selectedIconPath": "images/用户_填充.png"
+      }
+    ]
+  }
+}

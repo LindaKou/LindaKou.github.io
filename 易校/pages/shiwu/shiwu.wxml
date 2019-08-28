@@ -1,0 +1,38 @@
+<import src="../template/list.wxml" />
+<view class="search">
+  <view class="search-wrapper {{show_search_back?'search-wrapper-blue':''}}">
+    <view class="search-button" bindtap="click_search">
+      <view class="iconfont icon-sousuo"></view>
+      搜索信息
+    </view>
+  </view>
+</view>
+
+<view class="index_list">
+  <view class="wx-for" wx:for="{{moodList}}" wx:for-item="item" wx:key="*this" >
+  <view class="horizontal">
+    <view class="tag tag_{{item.acttype}}">{{item.acttypeName}}</view>
+  </view>
+  <view class="pic">
+   <image class="widget__arrow"  style="width:700rpx; height:500rpx;" src="{{item.attachment}}" mode='aspectFill'></image> 
+  </view>
+  <view class="con" data-actid="{{item.id}}" data-pubid="{{item.publisherId}}" mode="aspectFill" bindtap="click_activity">
+   宝贝详情：{{item.content}}
+   
+  </view>
+  <view class="cont" data-actid="{{item.id}}" data-pubid="{{item.publisherId}}" mode="aspectFill" bindtap="click_activity">
+   请联系我：{{item.contactWay}}{{item.contactValue}}
+   
+  </view>
+  </view>
+  
+</view>
+<view class="bord"></view>
+<view class="returnTop"  wx:if="{{scrollTop.goTop_show}}" catchtap="goTopFun"></view>
+<view class="weui-loadmore" hidden="{{isload}}">
+  <view class="weui-loading"></view>
+  <view class="weui-loadmore__tips">正在加载</view>
+</view>
+<view class="weui-loadmore weui-loadmore_line" hidden="{{isEmpty}}">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+</view>

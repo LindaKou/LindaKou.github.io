@@ -1,0 +1,47 @@
+<view class="amountBg">
+ 
+  <view class="account">
+ <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" ></image>    
+  </view>
+  <view class="img">
+  <view>{{userInfo.nickName}}</view>
+  </view> 
+   <view class="nav"></view>
+</view>
+
+  <view class="item">
+  <view class="icon"><image src="../../images/me/wodefabu.png"style="width:22px;height:21px;"></image></view>
+   <view class="itemname">
+    <navigator url="../../pages/mylaunch/mylaunch">
+     <view>我的发布</view>
+   </navigator>
+   </view>
+  </view>
+
+<view class="item">
+<view class="icon"><image src="../../images/me/fankui.png"style="width:22px;height:21px;"></image></view>
+  <view class="itemname">
+   <navigator url="../../pages/suggestion/suggestion">
+     <view>反馈建议</view>
+   </navigator>
+  </view>
+</view>
+
+  <view class="item">
+  <view class="icon"><image src="../../images/me/jianjie.png"style="width:22px;height:21px;"></image></view>
+   <view class="itemname">
+     <navigator url="../../pages/introduction/introduction">
+     <view>项目简介</view>
+   </navigator>
+   </view>
+  </view>
+
+ <view class="item">
+<view class="icon"><image src="../../images/me/guanyuwomen.png"style="width:22px;height:21px;"></image></view>
+ <view class="itemname">
+  <navigator url="../../pages/aboutus/aboutus">
+     <view>关于我们</view>
+   </navigator>
+ </view>
+</view>
+

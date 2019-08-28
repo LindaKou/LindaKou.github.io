@@ -1,0 +1,14 @@
+<view class="jiaoshi">
+  <view>{{jxl}}</view>
+  <view>{{rq}}</view>
+  <view>{{index}}</view>
+</view>
+ <text>注</text><text class="ld">.</text><text class="lvd">.</text>
+ <text>代表教室被占用</text>
+<span style="font-family:Comic Sans MS;font-size:18px;color:#333333;">
+<view class="container"> 
+ <view wx:for="{{imagalist}}" wx:for-item="image" class="previewimg"> 
+  <image src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image> 
+ </view> 
+</view>
+</span>

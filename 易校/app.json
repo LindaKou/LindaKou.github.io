@@ -1,0 +1,61 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/shiwu/shiwu",
+    "pages/classroom/classroom",
+    "pages/class/class",
+    "pages/images/images",
+    "pages/me/me",
+    "pages/mylaunch/mylaunch",
+    "pages/aboutus/aboutus",
+    "pages/introduction/introduction",
+    "pages/updAct/updAct",
+    "pages/suggestion/suggestion",
+    "pages/template/template",
+    "pages/post/post",
+    "pages/search/search",
+    "pages/detail/detail"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#0000C6",
+    "navigationBarTitleText": "易校",                               
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "blue",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "selectedColor": "black",
+    "backgroundColor": "#F5F5F5",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/shiwu/shiwu",
+        "text": "失物招领",
+        "iconPath": "images/教室.png",
+        "selectedIconPath": "images/教室2.png"
+      },
+      {
+        "pagePath": "pages/post/post",
+        "text": "发布信息",
+        "iconPath": "images/发布.png",
+        "selectedIconPath": "images/发布 (1).png"
+      },
+      {
+        "pagePath": "pages/classroom/classroom",
+        "text": "教室查询",
+        "iconPath": "images/教室课表查询.png",
+        "selectedIconPath": "images/教室课表查询2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/用户.png",
+        "selectedIconPath": "images/用户_填充.png"
+      }
+    ]
+  },
+  "debug": true
+}

@@ -1,0 +1,74 @@
+<import src="/wxSearch/wxSearch.wxml" />
+<import src="../template/activity/common-list.wxml" />
+<view class="wxSearch-section">
+  <view class="search-pancel">
+    <input bindinput="wxSearchInput" bindfocus="wxSerchFocus" value="{{wxSearchData.value}}" bindblur="wxSearchBlur" name="input" confirm-type="搜索" class="search-input" placeholder="请输入失物类型..."></input>
+    <button bindtap="findEach" class="search-button" form-type="submit" size="mini" plain="true">
+      <icon type="search" color="#959595" size="12" />
+    </button>
+  </view>
+</view>
+<template is="wxSearch" data="{{wxSearchData}}" />
+<view class="scontainer">
+  <view class="bg">
+    <view class="choose_user" style="border-bottom:1rpx solid #e6e6e6;">
+      <view class="choose_user_item" style="color:#{{acttype==0?'fff':'118fff'}};background:#{{acttype==0?'118fff':'fff'}};" bindtap="choseTradeType" id="0">全部</view>
+      <view class="choose_user_item" style="color:#{{acttype==1?'fff':'118fff'}};background:#{{acttype==1?'118fff':'fff'}};" bindtap="choseTradeType" id="1">钥匙</view>
+      <view class="choose_user_item" style="color:#{{acttype==2?'fff':'118fff'}};background:#{{acttype==2?'118fff':'fff'}};" bindtap="choseTradeType" id="2">书</view>
+      <view class="choose_user_item" style="color:#{{acttype==3?'fff':'118fff'}};background:#{{acttype==3?'118fff':'fff'}};" bindtap="choseTradeType" id="3">卡等证件</view>
+      <view class="choose_user_item" style="color:#{{acttype==4?'fff':'118fff'}};background:#{{acttype==4?'118fff':'fff'}};" bindtap="choseTradeType" id="4">书包</view>
+      <view class="choose_user_item" style="color:#{{acttype==5?'fff':'118fff'}};background:#{{acttype==5?'118fff':'fff'}};" bindtap="choseTradeType" id="5">钱包</view>
+      <view class="choose_user_item" style="color:#{{acttype==6?'fff':'118fff'}};background:#{{acttype==6?'118fff':'fff'}};" bindtap="choseTradeType" id="6">水杯</view>
+      <view class="choose_user_item" style="color:#{{acttype==7?'fff':'118fff'}};background:#{{acttype==7?'118fff':'fff'}};" bindtap="choseTradeType" id="7">衣服</view>
+      <view class="choose_user_item" style="color:#{{acttype==8?'fff':'118fff'}};background:#{{acttype==8?'118fff':'fff'}};" bindtap="choseTradeType" id="8">手机</view>
+       <view class="choose_user_item" style="color:#{{acttype==9?'fff':'118fff'}};background:#{{acttype==9?'118fff':'fff'}};" bindtap="choseTradeType" id="9">眼镜</view>
+        <view class="choose_user_item" style="color:#{{acttype==10?'fff':'118fff'}};background:#{{acttype==10?'118fff':'fff'}};" bindtap="choseTradeType" id="10">耳机</view>
+      <view class="choose_user_item" style="color:#{{acttype==11?'fff':'118fff'}};background:#{{acttype==11?'118fff':'fff'}};" bindtap="choseTradeType" id="11">其他</view>
+    </view>
+  </view>
+
+  <view class="index-container">
+    <!--无通知记录-->
+    <view wx:if="{{moodList.length == 0}}">
+      <view class="imgitem">
+        <image src="../../images/zanwufankui.png" class="empty_img"></image>
+      </view>
+      <view class="txtitem">
+        <text class="t28rpx">检索不到信息</text>
+      </view>
+    </view>
+    <view wx:if="{{moodList.length > 0}}">
+      <view class="activities" wx:for="{{moodList}}" wx:key="id">
+        <view class="activity" wx:if="{{item.acttype == acttype || acttype == 0}}" index="{{shiwu}}">
+          <view class="list_header">
+            <view class="list_header_left">
+              <image mode="aspectFill" src="{{item.publisherPic}}" wx:if="publisherPic"></image>
+            </view>
+          </view>
+          <view class="horizontal">
+            
+    <view class="tag tag_{{item.acttype}}">{{item.acttypeName}}</view>
+  </view>
+  <view class="pic">
+   <image class="widget__arrow" src="{{item.attachment}}" mode="aspectFill"></image> 
+  </view>
+  <view class="con">
+   宝贝详情：{{item.content}}
+  </view>
+  <view class="cont">
+   请联系我：{{item.contactWay}}{{item.contactValue}}
+   
+  
+          </view>
+
+         
+         
+          
+        </view>
+      </view>
+      <view class="loadingmore">
+        <view class="no-more">---无更多信息---</view>
+      </view>
+    </view>
+  </view>
+</view>
