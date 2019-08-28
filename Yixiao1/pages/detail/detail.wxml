@@ -1,0 +1,138 @@
+<import src="../template/activity/act_comment.wxml" />
+<import src="../template/activity/applyed.wxml" />
+<import src="../template/toasts/toasts.wxml" />
+
+<!--评论输入弹窗-->
+<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{TopTips}}</view>
+<view class="dialog" wx:if="{{showCommentDialog}}" bindtap="hideCommentDialog"></view>
+<view class="dialog_content" wx:if="{{showCommentDialog}}">
+  <input bindinput="commentText" placeholder="{{commentInputHolder}}" focus="true" class="dialog-content-input" />
+  <view>
+    <button catchtap="publishComment" class="dialog-content-btn">评论</button>
+  </view>
+</view>
+
+<!--pages/detail/detail.wxml-->
+<scroll-view scroll-y="true" class="all_scr" style="padding-bottom:34rpx;">
+  <!--活动封面-->
+  <image wx:if="{{listPic}}" class="header_imgss" style="width:760rpx; height:450rpx;" src="{{listPic}}" bindtap='seeActBig' mode="aspectFill"></image>
+  
+  <view class="detail_con">
+    <text class="des_txt detail_txt">信息类型</text>
+      <view class="detail_row_right">
+        <!--信息类型-->
+        <text bindtap="showCostTab" class="green_txt" style="fonts-zie:28rpx">{{acttypeName}}</text>
+      </view>
+      <view class="detail_lineh"></view>
+  </view>  
+    <view class="detail_con">
+    <text class="des_txt detail_txt">问题描述</text>
+      <view class="detail_row_right">
+        <!--信息类型-->
+        <text bindtap="showCostTab" class="green_txt" style="fonts-zie:28rpx">{{listContent}}</text>
+      </view>
+      <view class="detail_lineh"></view>
+  </view>  
+    <view class="detail_con">
+    <text class="des_txt detail_txt">发布时间</text>
+      <view class="detail_row_right">
+        <!--信息类型-->
+        <text bindtap="showCostTab" class="green_txt" style="fonts-zie:28rpx">{{publishTime}}</text>
+      </view>
+      <view class="detail_lineh"></view>
+  </view>  
+   <!--发布者信息、发布时间、点赞量、评论量-->
+    <view catchtap="commentQuery" class="des_txt detail_msg">
+      <view>
+        <text>发起者: {{publisherName}}</text>
+      </view>
+      <view>
+        <text style="margin-right:12px;"></text>
+        <text style="margin-right:12px;">评论量: {{commentnum}}</text>
+        
+      </view>
+    </view>
+     <!--活动状态-->
+    <view class="detail_input">
+      <text class="des_txt detail_txt">发起状态</text>
+      <view class="detail_row_right">
+        <text class='statustag_{{actstatus}}'>{{statusname}}</text>
+      </view>
+    </view>
+     <!--评论title-->
+        <view class="comment_title paddingLR">
+          <text class="comment_text">{{commentnum}}条评论</text>
+          <text  bindtap="showCommentDialog" class='comment_button' style="color:#118fff">我要评论</text>
+        </view>
+        <view wx:if="{{!(commentnum> 0)}}" class="comment-footer-txt">暂无评论</view>
+
+        <!--评论列表-->
+        <view wx:if="{{ commentnum > 0}}" wx:for="{{commentList}}" wx:key="comment">
+    
+    <view bindtap="commentTap" data-item="{{item}}">
+        
+       
+            <view class="nickTime">
+                <view class="nickArea">
+                    <text class="nick">{{item.username}}</text>
+                    <text wx:if="{{item.pid!=0}}" class="nick" style="color:rgb(191,191,191)">回复</text><text wx:if="{{item.pid!=0}}" class="nick">{{item.pusername}}</text>
+                </view>
+                <text class="postTime" style="color:rgb(191,191,191);font-size:24rpx">{{item.created_at}}</text>
+            </view>
+        
+        <view class="actComment">{{item.content}}</view>
+    </view>
+
+        </view>
+
+        <view class="comment-footer-txt" wx:if="{{ commentnum  > 0}}" >---无更多评论---</view>
+        
+</scroll-view>
+   
+
+<!--改变活动状态 -->
+<view class=" {{ showStuDialog ? 'dialog_show' : '' }}">
+  <view class="dialog_mask" />
+  <view class="dialog_container">
+    <!--  //此区域为加入视图  -->
+    <view class="addForm2">
+      <form bindsubmit="stuSubmit" class="white" report-submit="true">
+        <view class="todoName">
+          <view class="weui-cell weui-cell_select">
+          <view class="weui-cell__bd weui-cell__bd_in-select-before">
+              <view class="weui-input">发起状态</view>
+            </view>
+            <view class="weui-cell__hd" style="width: 120px">
+              <picker bindchange="changeStatus" value="{{statusIndex}}" range="{{actStatusArray}}">
+                <view class="change-select">{{actStatusArray[statusIndex]}}</view>
+              </picker>
+            </view>
+          </view>
+        </view>
+        <view class="formButton">
+          <button class="textarea1_case_btn" type="primary" form-type="submit">确定</button>
+          <button class="textarea1_case_btn" type="warn" bindtap="closeChange">取消</button>
+        </view>
+      </form>
+    </view>
+  </view>
+  </view>
+    
+ 
+
+
+    
+
+    
+
+       
+
+       
+
+     
+   
+
+
+
+
+

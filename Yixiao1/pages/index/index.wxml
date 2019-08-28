@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+<view class="remind-box" wx:if="{{remind}}">
+  <image class="remind-img" src="images/419530.jpg"></image>
+  </view>
+    <view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="comfirm-btn" bindtap='goToIndex'>
+    <text >立即体验</text>
+  </view>
+  </view>

@@ -1,0 +1,90 @@
+.item{
+  margin:10px;
+  display:flex;
+  flex-direction: row;
+}
+
+.jxl{
+  width:100px;
+  text-align:right;
+  height:28px;
+  line-height:28px;
+  font-size:15px;
+}
+
+.rq{
+  width:100px;
+  text-align:right;
+  height:28px;
+  line-height:28px;
+  font-size:15px;
+}
+
+.dsz{
+  width:100px;
+  text-align:right;
+  height:28px;
+  line-height:28px;
+  font-size:15px;
+}
+
+.way{
+   width:230px;
+  height:30px;
+   text-align:left;
+  font-size:13px;
+}
+
+.way1{
+   width:230px;
+  height:30px;
+   text-align:left;
+  font-size:13px;
+}
+
+.picker{
+   width:230px;
+   height:30px;
+   text-align:left;
+   font-size:13px;
+}
+
+.bth{
+   width:220px;
+  height:45px;
+  line-height:45px;
+  background-color: blue;
+  color:#ffffff;
+  border-radius: 50px;
+}
+.bg{
+  display:block;
+  background-color: #cccccc;
+  width: 100%;
+  height: 750px;
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:999;
+  opacity:0.9;
+}
+.radioBg{
+  background-color: #ffffff;
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.radioItem{
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: right;
+  border-bottom: 1px solid #cccccc;
+}
+.radioName{
+  width: 90%;
+}
+.hideBg{
+  display: none;
+}

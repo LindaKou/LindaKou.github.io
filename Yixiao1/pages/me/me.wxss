@@ -1,0 +1,53 @@
+.amountBg{
+  height:100px;
+  background-color:#5495E6;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+
+.img{
+  padding-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   color:#ffffff;
+}
+
+.account{
+  width:35%;
+  color:#ffffff;
+  margin-left:10px;
+}
+
+.nav{
+  width:15px;
+  color:#ffffff;
+}
+
+.item{
+  background-color:#ffffff;
+  display:flex;
+  flex-direction:row;
+  height:50px;
+  align-items:center;
+}
+
+.icon{
+  width:50px;
+  text-align:center;
+}
+
+.itemname{
+  width:40%;
+  font-size:18px;
+  font-weight:bold;
+}
+.userinfo-avatar {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx;
+  margin-bottom: 2rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}

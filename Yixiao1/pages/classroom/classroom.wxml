@@ -1,0 +1,91 @@
+ <view class="haibao">
+   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+       <block wx:for="{{imgUrls}}">
+           <swiper-item>
+               <image src="{{item}}" calss="silde-image" style="width:100%"></image>
+           </swiper-item>
+       </block>
+   </swiper>
+ </view>  
+
+<view class ="content">
+ <form bindsubmit="formSubmit">
+   <view class="item">
+    <view class="jxl">选择教学楼</view>
+    <view><button class="way" bindtap="selectWay">{{way}}</button></view>
+   </view>
+   <view class="item">
+    <view class="rq">选择日期</view>
+    <view><button class="way1" bindtap="selectWay1">{{way1}}</button></view>
+   </view>
+   <view class="item">
+    <view class="dsz">选择1-18周</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+       <view class="picker">当前选择:{{array[index]}}</view>
+    </picker>
+   </view>
+    <button class="bth" form-type="submit" >确认查询</button>
+ </form>
+</view>
+
+<view  class="{{flag=='0'?'bg':'hideBg'}}">
+   <view class="radioBg">
+      <radio-group bindchange="radioChange">
+         <view class="radioItem">
+           <view class="radionName">请选择教学楼</view>
+           <view class="radioVal"><radio value="请选择教学楼"checked/></view>
+         </view>
+         <view class="radioItem">
+           <view class="radionName">基础教学楼</view>
+           <view class="radioVal"><radio value="基础教学楼"checked/></view>
+         </view>
+         <view class="radioItem">
+           <view class="radionName">土木楼</view>
+           <view class="radioVal"><radio value="土木楼"checked/></view>
+         </view>
+          <view class="radioItem">
+           <view class="radionName">第二教学楼</view>
+           <view class="radioVal"><radio value="第二教学楼"checked/></view>
+          </view>
+          <view class="radioItem">
+           <view class="radionName">第三教学楼</view>
+           <view class="radioVal"><radio value="第三教学楼"checked/></view>
+          </view>
+     </radio-group>
+   </view>
+ </view>
+
+<view  class="{{flag1=='0'?'bg':'hideBg'}}">
+  <view class="radioBg">
+      <radio-group bindchange="radioChange1">
+         <view class="radioItem">
+           <view class="radionName">请选择日期</view>
+           <view class="radioVal"><radio value="请选择日期"checked/></view>
+         </view>
+         <view class="radioItem">
+           <view class="radionName">星期一</view>
+           <view class="radioVal"><radio value="星期一"checked/></view>
+         </view>
+         <view class="radioItem">
+           <view class="radionName">星期二</view>
+           <view class="radioVal"><radio value="星期二"checked/></view>
+         </view>
+          <view class="radioItem">
+           <view class="radionName">星期三</view>
+           <view class="radioVal"><radio value="星期三"checked/></view>
+          </view>
+          <view class="radioItem">
+           <view class="radionName">星期四</view>
+           <view class="radioVal"><radio value="星期四"checked/></view>
+          </view>
+           <view class="radioItem">
+           <view class="radionName">星期五</view>
+           <view class="radioVal"><radio value="星期五"checked/></view>
+          </view>
+     </radio-group>
+   </view>
+ </view>
+
+
+
+

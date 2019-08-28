@@ -1,0 +1,166 @@
+/**index.wxss**/
+@import '/font.wxss';
+
+page, input, textarea {
+  font-family: "Microsoft YaHei UI", "PingFang SC", -apple-system-font;
+}
+
+page {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.mpage {
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  background-color: #fff;
+}
+
+.search {
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+.search-wrapper {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right:10px;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+}
+
+.search-button {
+  margin: 0 auto;
+  height: 25px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  font-size: 13px;
+  line-height: 26px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.search-wrapper-blue {
+  background-color: #1296db;
+}
+
+
+.index_list {
+  
+  text-align:left;
+  color: #666;
+  padding-top: 50rpx;
+}
+
+.wx-for {
+  background: #fff;
+  margin-bottom: 30rpx;
+  padding: 40rpx 40rpx;
+  overflow: hidden;
+  border-bottom: 1px solid #ededee;
+  border-top: 1px solid #ededee;
+}
+.horizontal {
+  display: inline;
+  padding-top: 18rpx;
+  padding-bottom: 10rpx;
+  text-align: left;
+}
+
+.horizontal .tag {
+  display: inline-block;
+  
+  font-size: 28rpx;
+  padding: 2rpx 10rpx;
+  border-radius: 6rpx;
+  margin-right: 10rpx;
+}
+
+.horizontal .recommend {
+  border-radius: 10rpx;
+  border: 3rpx solid #3688ff;
+  background: #118fff;
+  color: #fff;
+  font-size: 23rpx;
+  margin-left: 10rpx;
+  margin-right: 20rpx;
+  padding: 3rpx 10rpx;
+  line-height: 1rem;
+}
+
+.horizontal .tag_1 {
+  background: #fe6c01;
+  color: #fff;
+}
+
+.horizontal .tag_2 {
+  background: #00cdab;
+  color: #fff;
+}
+
+.horizontal .tag_3 {
+  background: #0e53a6;
+  color: #fff;
+}
+
+.horizontal .tag_4 {
+  background: #1dd201;
+  color: #fff;
+}
+
+.horizontal .tag_5 {
+  background: #fec401;
+  color: #fff;
+}
+
+.horizontal .tag_6 {
+  background: #fe0701;
+  color: #fff;
+}
+
+.horizontal .tag_7 {
+  background: #0c5da5;
+  color: #fff;
+}
+
+.horizontal .tag_8 {
+  background: #e20149;
+  color: #fff;
+}
+
+.horizontal .tag_9 {
+  background: #a54a00;
+  color: #fff;
+}
+.horizontal .tag_10 {
+  background: #fe6c01;
+  color: #fff;
+}
+.horizontal .tag_11 {
+  background: #fe6c01;
+  color: #fff;
+}
+
+.horizontal .title {
+  font-size: 30rpx;
+  color: #333;
+  text-align: left;
+}
+
+.bord{
+  height:1px;
+  width:100%;
+  position:fixed;
+  bottom: 0;
+  left:0;
+  background:#ccc;
+  }

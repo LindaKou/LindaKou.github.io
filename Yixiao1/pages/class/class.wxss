@@ -1,0 +1,49 @@
+.jiaoshi{
+  height:40px;
+  background-color: #5495E6;
+  display: flex;
+  flex-direction: row;
+}
+.jiaoshi view{
+  margin: 0 auto;
+  color:#ffffff;
+  padding-top: 10px;
+}
+.ld{
+  font-size: 60px;
+  color:red;
+}
+.lvd{
+  font-size: 60px;
+  color:green;
+}
+.item{
+  width:32%;
+  height:45px;
+  margin-top:10px;
+  text-align:center;
+  float:left;
+}
+.items{
+  background:#ffffff;
+  height:1000px;
+}
+.name{
+  font-size:14px;
+  font-weight: bold;
+  margin:5px;
+}
+.container{
+  box-sizing: border-box;
+  padding: 20px;
+}
+.previewimg{
+  float: left;
+  width:100%;
+  height:200px;
+  margin:2%;
+}
+.previewimg image{
+  width: 100%;
+  height:100%;
+}
